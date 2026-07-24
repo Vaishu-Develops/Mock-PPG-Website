@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPG Institute of Technology</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .carousel-item img {
+            height: 600px; /* Adjust height as needed */
+            object-fit: cover; /* Ensures image fits without distortion */
+        }
+
+        .top-bar {
+            background-color: #E5834B;
+            padding: 5px 0;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+        }
+        .navbar {
+            background: white;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        }
+        .navbar-brand img {
+            height: 60px;
+        }
+        .header-buttons {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .header-buttons .btn {
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+        .announcement-bar {
+            background: #E5834B;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .hero-section {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .hero-section img {
+            width: 100%;
+            opacity: 0.7;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .floating-buttons a {
+            margin: 5px;
+            padding: 12px;
+            font-size: 20px;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+        }
+        .btn-blue { background: #007bff; }
+        .btn-orange { background: #ff9800; }
+        .btn-green { background: #25d366; }
+    </style>
+</head>
+<body>
+
+    <h1 id="text">HTML</h1>
+    <button onclick="changeText()">change Text</button>
+
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <span><i class="fas fa-phone-alt"></i> +91 90477 77277, +91 90477 77977</span> |
+        <span><i class="fas fa-envelope"></i> ppgit@ppg.edu.in</span>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="PPG-Logo-1-1.jpg" alt="PPG Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Library</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Placement</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Buttons -->
+    <div class="header-buttons">
+        <button class="btn btn-danger">TNEA COUNSELLING CODE-2753</button>
+        <button class="btn btn-primary">IDEA LAB</button>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        ★ Mass-2k25 ★ Innoverse-2k25 ★ 17th Annual Day-2k25 ★ TNEA Counselling Code-2753
+    </div>
+
+    <!-- Hero Section 
+    <div class="hero-section">
+        <img src="ppgimg.jpg" alt="PPG Campus">
+        <div class="hero-text">Welcome to PPG Institute of Technology</div>
+    </div>-->
+
+        <!-- Hero Section with Carousel -->
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="ppgimg.jpg" class="d-block w-100" alt="Campus 1">
+                    <div class="carousel-caption hero-text">
+                        Welcome to PPG Institute of Technology
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="ppgimg2.jpg" class="d-block w-100" alt="Campus 2">
+                    <div class="carousel-caption hero-text">
+                        Inspiring Innovation & Excellence
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="ppgimg3.jpg" class="d-block w-100" alt="Campus 3">
+                    <div class="carousel-caption hero-text">
+                        Empowering Future Leaders
+                    </div>
+                </div>
+            </div>
+
+                <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-buttons">
+        <a href="#" class="btn btn-blue"><i class="fas fa-file-alt"></i></a>
+        <a href="#" class="btn btn-orange"><i class="fas fa-phone-alt"></i></a>
+        <a href="#" class="btn btn-green"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
